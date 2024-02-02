@@ -8,18 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		9DB738942B6D4D0D00B8E4ED /* HouseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738932B6D4D0D00B8E4ED /* HouseApp.swift */; };
-		9DB738962B6D4D0D00B8E4ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738952B6D4D0D00B8E4ED /* ContentView.swift */; };
 		9DB738982B6D4D0F00B8E4ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB738972B6D4D0F00B8E4ED /* Assets.xcassets */; };
 		9DB7389B2B6D4D0F00B8E4ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB7389A2B6D4D0F00B8E4ED /* Preview Assets.xcassets */; };
+		9DB738AA2B6D4E4000B8E4ED /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738A92B6D4E4000B8E4ED /* FormView.swift */; };
+		9DB738AC2B6D4E5A00B8E4ED /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738AB2B6D4E5A00B8E4ED /* PreferencesView.swift */; };
+		9DB738B02B6D4E7E00B8E4ED /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738AF2B6D4E7E00B8E4ED /* FormViewModel.swift */; };
+		9DB738B42B6D529C00B8E4ED /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B32B6D529C00B8E4ED /* Door.swift */; };
+		9DB738B62B6D531000B8E4ED /* AppMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B52B6D531000B8E4ED /* AppMenuView.swift */; };
+		9DB738B82B6D540A00B8E4ED /* AppMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9DB738902B6D4D0D00B8E4ED /* House.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = House.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DB738932B6D4D0D00B8E4ED /* HouseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseApp.swift; sourceTree = "<group>"; };
-		9DB738952B6D4D0D00B8E4ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9DB738972B6D4D0F00B8E4ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DB7389A2B6D4D0F00B8E4ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9DB7389C2B6D4D0F00B8E4ED /* House.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = House.entitlements; sourceTree = "<group>"; };
+		9DB738A92B6D4E4000B8E4ED /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
+		9DB738AB2B6D4E5A00B8E4ED /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		9DB738AF2B6D4E7E00B8E4ED /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
+		9DB738B32B6D529C00B8E4ED /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
+		9DB738B52B6D531000B8E4ED /* AppMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuView.swift; sourceTree = "<group>"; };
+		9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +62,10 @@
 		9DB738922B6D4D0D00B8E4ED /* House */ = {
 			isa = PBXGroup;
 			children = (
+				9DB738A22B6D4DCA00B8E4ED /* Models */,
+				9DB738A32B6D4DDD00B8E4ED /* Views */,
+				9DB738A42B6D4DF100B8E4ED /* ViewModels */,
 				9DB738932B6D4D0D00B8E4ED /* HouseApp.swift */,
-				9DB738952B6D4D0D00B8E4ED /* ContentView.swift */,
 				9DB738972B6D4D0F00B8E4ED /* Assets.xcassets */,
 				9DB7389C2B6D4D0F00B8E4ED /* House.entitlements */,
 				9DB738992B6D4D0F00B8E4ED /* Preview Content */,
@@ -67,6 +79,33 @@
 				9DB7389A2B6D4D0F00B8E4ED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9DB738A22B6D4DCA00B8E4ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9DB738B32B6D529C00B8E4ED /* Door.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9DB738A32B6D4DDD00B8E4ED /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9DB738A92B6D4E4000B8E4ED /* FormView.swift */,
+				9DB738AB2B6D4E5A00B8E4ED /* PreferencesView.swift */,
+				9DB738B52B6D531000B8E4ED /* AppMenuView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9DB738A42B6D4DF100B8E4ED /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9DB738AF2B6D4E7E00B8E4ED /* FormViewModel.swift */,
+				9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +178,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB738962B6D4D0D00B8E4ED /* ContentView.swift in Sources */,
+				9DB738AC2B6D4E5A00B8E4ED /* PreferencesView.swift in Sources */,
+				9DB738B42B6D529C00B8E4ED /* Door.swift in Sources */,
+				9DB738B82B6D540A00B8E4ED /* AppMenuViewModel.swift in Sources */,
+				9DB738AA2B6D4E4000B8E4ED /* FormView.swift in Sources */,
+				9DB738B62B6D531000B8E4ED /* AppMenuView.swift in Sources */,
 				9DB738942B6D4D0D00B8E4ED /* HouseApp.swift in Sources */,
+				9DB738B02B6D4E7E00B8E4ED /* FormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +323,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -306,6 +351,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -12,11 +12,10 @@ struct GrowingButton: ButtonStyle {
 
 struct FormView: View {
     @Environment(\.dismiss) private var dismiss
+    @State private var vm = ViewModel()
     @State var name: String = ""
     @State var url: String = ""
-    var disabled: Bool {
-        return name.isEmpty || url.isEmpty
-    }
+    var disabled: Bool { return name.isEmpty || url.isEmpty }
 
     var body: some View {
         VStack {
@@ -51,7 +50,7 @@ struct FormView: View {
             HStack(alignment: .center) {
                 Button {
                     if !name.isEmpty || !url.isEmpty {
-                        // save connection
+                        vm.appendDoor(name: name, url: url)
                         dismiss()
                         name = ""; url = ""
                     } else { return }

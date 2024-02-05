@@ -1,3 +1,4 @@
+import SwiftData
 import SwiftUI
 
 struct AppMenuView: View {
@@ -26,16 +27,15 @@ struct AppMenuView: View {
                 .font(.headline)
                 .fontWeight(.light)
                 .foregroundStyle(.gray)
-            ForEach(vm.doorList) { door in
-
+            ForEach(Array(Doors.enumerated()), id: \.1) { _, door in
                 Label {
                     Text(door.name).fontWeight(.thin).lineLimit(1).padding(1.5)
                 } icon: {
                     RoundedRectangle(cornerRadius: 8)
-                        .fill(vm.circleColor(doorStatus: door.status!))
+                        .fill(vm.circleColor(doorStatus: door.status ?? "")!)
                         .frame(width: 20, height: 20)
                 }
-            }.onDelete(perform: vm.deleteDoor)
+            }
             Divider()
             HStack {
                 Spacer()

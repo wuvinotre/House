@@ -1,34 +1,35 @@
 import Foundation
+import SwiftData
 import SwiftUI
 
 extension AppMenuView {
-    class ViewModel: ObservableObject {
-        @Published var doorList = [Door]()
-        @Published var doorsCount = 0
+    @Observable
+    class ViewModel {
+        @ObservationIgnored
+        private let dataSource: DataSource
 
-        init() {
-            loadDoors()
+        var doorsCount = 0
+
+        init(dataSource: DataSource = DataSource.shared) {
+            self.dataSource = dataSource
+            Doors = dataSource.fetchDoors()
+            doorsCount = Doors.count
         }
 
-        func loadDoors() {
-            doorList = Door.examples()
-            doorsCount = doorList.count
+        func removeDoor(_ index: Int) {
+            dataSource.removeDoor(Doors[index])
         }
 
-        func deleteDoor(at offset: IndexSet) {
-            withAnimation {
-                doorList.remove(atOffsets: offset)
-            }
-        }
-
-        func circleColor(doorStatus: StatusDoor) -> Color {
+        func circleColor(doorStatus: String) -> Color? {
             switch doorStatus {
-            case .on:
+            case "on":
                 return .green
-            case .off:
+            case "off":
                 return .red
-            case .notFound:
+            case "notFound":
                 return .gray
+            default:
+                return .purple
             }
         }
     }

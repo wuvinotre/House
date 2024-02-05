@@ -1,13 +1,17 @@
 import Foundation
 
 extension FormView {
+    @Observable
     class ViewModel: ObservableObject {
-//        correction because the doorList must come from storage
-        @Published var doorList = [Door]()
+        @ObservationIgnored
+        private let dataSource: DataSource
 
-        func addDoor(name: String, url: String) {
-            let newDoor = Door(name: name, status: .off, url: url)
-            doorList.insert(newDoor, at: 0)
+        init(dataSource: DataSource = DataSource.shared) {
+            self.dataSource = dataSource
+        }
+
+        func appendDoor(name: String, url: String) {
+            dataSource.appendDoor(Door(name: name, status: nil, url: url))
         }
     }
 }

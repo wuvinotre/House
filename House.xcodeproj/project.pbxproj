@@ -16,6 +16,7 @@
 		9DB738B42B6D529C00B8E4ED /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B32B6D529C00B8E4ED /* Door.swift */; };
 		9DB738B62B6D531000B8E4ED /* AppMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B52B6D531000B8E4ED /* AppMenuView.swift */; };
 		9DB738B82B6D540A00B8E4ED /* AppMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */; };
+		9DB738BB2B6D74C800B8E4ED /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB738BA2B6D74C800B8E4ED /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9DB738B32B6D529C00B8E4ED /* Door.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		9DB738B52B6D531000B8E4ED /* AppMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuView.swift; sourceTree = "<group>"; };
 		9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenuViewModel.swift; sourceTree = "<group>"; };
+		9DB738BA2B6D74C800B8E4ED /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		9DB738922B6D4D0D00B8E4ED /* House */ = {
 			isa = PBXGroup;
 			children = (
+				9DB738B92B6D749800B8E4ED /* Utilities */,
 				9DB738A22B6D4DCA00B8E4ED /* Models */,
 				9DB738A32B6D4DDD00B8E4ED /* Views */,
 				9DB738A42B6D4DF100B8E4ED /* ViewModels */,
@@ -106,6 +109,14 @@
 				9DB738B72B6D540A00B8E4ED /* AppMenuViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9DB738B92B6D749800B8E4ED /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9DB738BA2B6D74C800B8E4ED /* DataSource.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				9DB738AA2B6D4E4000B8E4ED /* FormView.swift in Sources */,
 				9DB738B62B6D531000B8E4ED /* AppMenuView.swift in Sources */,
 				9DB738942B6D4D0D00B8E4ED /* HouseApp.swift in Sources */,
+				9DB738BB2B6D74C800B8E4ED /* DataSource.swift in Sources */,
 				9DB738B02B6D4E7E00B8E4ED /* FormViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,12 +335,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuinishiusu.House;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -351,12 +365,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vuinishiusu.House;
 				PRODUCT_NAME = "$(TARGET_NAME)";
